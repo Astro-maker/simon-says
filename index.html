@@ -82,6 +82,47 @@
       .hide {
         display: none;
       }
+
+      #contanivel{
+        position: absolute;
+        left: 140px;
+        top: 50px;
+        background: lightblue;
+        border: 5px solid black;
+        border-radius: 20px;
+        width: 70px;
+        text-align: center;
+      }
+
+      #contanivel > h1{
+        font-size: 40px;
+        color: white;
+      }
+
+      #contanivel > h2 {
+        color: white;
+      }
+
+      #contasubnivel{
+        position: absolute;
+        right: 140px;
+        top: 50px;
+        background: lightblue;
+        border: 5px solid black;
+        border-radius: 20px;
+        width: 70px;
+        text-align: center;
+      }
+
+      #contasubnivel > h1{
+        font-size: 40px;
+        color: white;
+      }
+
+      #contasubnivel > h2 {
+        color: white;
+      }
+
     </style>
   </head>
   <body>
@@ -91,6 +132,16 @@
       <div id="naranja" class="color naranja left" data-color="naranja"></div>
       <div id="verde" class="color verde right" data-color="verde"></div>
       <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Empezar a jugar!</button>
+    </div>
+
+    <div id="contanivel">
+      <h1 id="nivel">1</h1>
+      <h2>Nivel</h2>
+    </div>
+
+    <div id="contasubnivel">
+      <h1 id="elsubnivel">0</h1>
+      <h2>Lugar</h2>
     </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js">

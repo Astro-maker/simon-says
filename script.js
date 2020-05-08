@@ -4,6 +4,8 @@ const naranja = document.getElementById('naranja')
 const verde = document.getElementById('verde')
 const btnEmpezar = document.getElementById('btnEmpezar')
 const ULTIMO_NIVEL = 10
+const nivel = document.getElementById("nivel")
+const elsubnivel = document.getElementById('elsubnivel')
 
 class Juego {
   constructor() {
@@ -39,6 +41,7 @@ class Juego {
 
   siguienteNivel() {
     this.subnivel = 0
+    nivel.innerHTML = this.nivel
     this.generarSecuencia()
     this.iluminarSecuencia()
     this.agregarEventosClick()
@@ -77,6 +80,7 @@ class Juego {
     }
   }
 
+
   iluminarColor(color) {
     this.colores[color].classList.add('light')
     setTimeout(() => this.apagarColor(color), 350)
@@ -106,6 +110,7 @@ class Juego {
     this.iluminarColor(nombreColor)
     if(numeroColor === this.secuencia[this.subnivel]) {
       this.subnivel++
+      elsubnivel.innerHTML = this.subnivel
       if (this.subnivel === this.nivel) {
         this.nivel++
         this.eliminarEventosClick()
@@ -118,6 +123,8 @@ class Juego {
       }
     } else {
       this.perdioElJuego()
+      nivel.innerHTML = 1
+      elsubnivel.innerHTML = 0
     }
   }
 
